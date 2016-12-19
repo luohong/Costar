@@ -1,0 +1,6 @@
+include ':app', ':VideoTools'
+
+Properties properties = new Properties()
+properties.load(new FileInputStream(new File(settingsDir, "local.properties")))
+def remixDir = properties.getProperty("remix.dir")
+project(':VideoTools').projectDir = new File(remixDir, 'VideoTools')

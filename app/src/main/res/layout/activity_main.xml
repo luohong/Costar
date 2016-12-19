@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextureView
+                android:id="@+id/texture_video_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/mask_video_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_record_1"
+                android:layout_width="96dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="48dp"
+                android:text="拍摄视频 1" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextureView
+                android:id="@+id/texture_video_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/mask_video_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <Button
+                android:id="@+id/btn_record_2"
+                android:layout_width="96dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="48dp"
+                android:enabled="false"
+                android:text="拍摄视频 2" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_record_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="请将手机固定一个方向，不要移动"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|top"
+        android:layout_margin="16dp"
+        android:enabled="false"
+        android:text="完成" />
+
+</FrameLayout>
